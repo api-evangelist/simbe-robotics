@@ -1,0 +1,88 @@
+generated: '2026-08-27'
+method: probed
+source: >-
+  Direct HTTPS GETs of /.well-known/* on every host associated with Simbe Robotics on 2026-08-27.
+  Simbe publishes no /.well-known documents on any host.
+note: >-
+  Every path missed. www.simberobotics.com and status.simberobotics.com return real 404s (Next.js
+  error shell / Vercel 404). trust.simberobotics.com is a Vanta-hosted single-page app whose catch-all
+  route answers HTTP 200 with the SAME 5,441-byte HTML shell for EVERY /.well-known/* path — those
+  200s are the classic SPA false positive and are recorded here as misses, not documents. No
+  WellKnown or SecurityTxt pointer is emitted in apis.yml because no path returned a real document.
+hosts:
+- host: www.simberobotics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: status.simberobotics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: trust.simberobotics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell, not a document — treated as a miss.

@@ -1,18 +1,51 @@
 aid: simbe-robotics
 name: Simbe Robotics
-description: 'Simbe Robotics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market;
-  backed by lemnos-labs) and added to the network as a stub for full-pipeline profiling.'
+description: Simbe Robotics (Simbe) is a San Francisco Bay Area physical-AI and retail-robotics company
+  whose Store Intelligence platform combines the Tally shelf-scanning robot, fixed in-store sensors and
+  RFID to give grocery, wholesale-club, home-improvement and specialty retailers real-time inventory,
+  pricing and shelf-condition data. Tally is built on ROS and feeds Simbe's cloud platform, which exposes
+  store data to retailers through a front-end application, a mobile app and virtual store tours, and through
+  an API that pushes shelf, out-of-stock and price-accuracy data into a retailer's existing merchandising,
+  inventory and task-management systems. Deployments include BJ's Wholesale Club, Schnuck Markets, Wakefern/ShopRite,
+  SpartanNash, Ball's Foods, Kaufland, Decathlon and Theisen's. Simbe operates a public status page that
+  monitors a Website, an App and an API component, and a Vanta-hosted trust center, but publishes no public
+  developer portal, API reference or machine-readable specification — its FAQ states that "standard API
+  documentation" is supplied to customers as part of an integration engagement.
 url: https://raw.githubusercontent.com/api-evangelist/simbe-robotics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-27'
 modified: '2026-08-27'
+image: https://cdn.sanity.io/images/oh42c9n6/production/bbd2d27a0491f3f49e5ea8adaf400014f3463e33-7008x4672.jpg
 tags:
 - Company
-apis: []
+- Robotics
+- Retail
+- Inventory
+- Computer Vision
+- Artificial Intelligence
+- Store Intelligence
+- RFID
+- Supply Chain
+- Physical AI
+apis:
+- name: Simbe Store Intelligence API
+  description: Simbe's cloud platform API, which feeds Tally-captured shelf, inventory, pricing and out-of-stock
+    data into a retailer's existing systems. Its existence is confirmed by Simbe's own public status page,
+    which monitors an "API" component alongside "Website" and "App" (99.91% uptime, May-Aug 2026). No
+    public reference, base URL or machine-readable specification is published; Simbe's FAQ states that
+    standard API documentation is provided to customers during integration, so the contract is customer-only.
+  humanURL: https://www.simberobotics.com/store-intelligence/tally
+  tags:
+  - Retail
+  - Inventory
+  - Store Intelligence
+  properties:
+  - type: StatusPage
+    url: https://status.simberobotics.com/
+  - type: Support
+    url: https://simberobotics.atlassian.net/servicedesk/customer/portal/3
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -21,5 +54,56 @@ maintainers:
 x-backed-by:
 - lemnos-labs
 common:
+- type: DomainSecurity
+  url: security/simbe-robotics-domain-security.yml
 - type: Website
+  url: https://www.simberobotics.com/
+- type: StatusPage
+  url: https://status.simberobotics.com/
+- type: TrustCenter
+  url: https://trust.simberobotics.com/
+- type: Support
+  url: https://simberobotics.atlassian.net/servicedesk/customer/portal/3
+- type: Blog
+  url: https://www.simberobotics.com/about/newsroom
+- type: GitHubOrganization
+  url: https://github.com/SimbeRobotics
+- type: PrivacyPolicy
+  url: https://www.simberobotics.com/privacy-policy
+- type: TermsOfService
+  url: https://www.simberobotics.com/terms-of-use
+- type: SecondaryMarketListing
   url: https://www.hiive.com/securities/simbe-robotics-stock
+- type: Lifecycle
+  url: lifecycle/simbe-robotics-lifecycle.yml
+- type: Plans
+  url: plans/simbe-robotics-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/simbe-robotics-rate-limits.yml
+- type: LLMsTxt
+  url: llms/simbe-robotics-llms.txt
+x-enrichment:
+  date: '2026-08-27'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: Simbe's own incident.io status page monitors a production "API" component at 99.91% uptime,
+    but the only public statement about the contract is the FAQ line "We'll provide you our standard API
+    documentation which will allow us to start feeding you the data" - the reference is handed to retail
+    customers during a paid integration engagement, and api./docs./developer.simberobotics.com do not
+    resolve at all.
+  evidence:
+  - url: https://status.simberobotics.com/
+    status: 200
+  - url: https://www.simberobotics.com/faqs
+    status: 200
+  - url: https://www.simberobotics.com/openapi.json
+    status: 404
+  - url: https://www.simberobotics.com/llms.txt
+    status: 404
+  - url: https://www.simberobotics.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-27'

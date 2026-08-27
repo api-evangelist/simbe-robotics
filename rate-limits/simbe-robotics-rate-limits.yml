@@ -1,0 +1,23 @@
+generated: '2026-08-27'
+method: searched
+source: https://www.simberobotics.com/faqs
+limit_count: 0
+note: >-
+  No rate limits are published. Simbe has no public developer portal, API reference or
+  machine-readable specification, so there is no document that states a quota, a window, a burst
+  allowance, or the response headers the API returns on exhaustion. Simbe's FAQ states that
+  "standard API documentation" is provided to customers as part of an integration engagement, so
+  any published limits sit behind that customer relationship. An agent integrating with Simbe today
+  cannot learn the runtime rate-limit signal from anything public.
+limits: []
+headers: []
+exhaustion_status_code: null
+evidence:
+- url: https://www.simberobotics.com/faqs
+  status: 200
+  note: >-
+    "We'll provide you our standard API documentation which will allow us to start feeding you the
+    data." — the only public statement about API documentation.
+- url: https://www.simberobotics.com/sitemap.xml
+  status: 200
+  note: No developer, docs or API-reference path in 1,334 URLs.

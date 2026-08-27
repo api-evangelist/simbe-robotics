@@ -1,0 +1,52 @@
+generated: '2026-08-27'
+method: searched
+source: https://status.simberobotics.com/
+note: >-
+  Simbe publishes an incident.io-hosted status page and nothing else on the lifecycle surface — no
+  versioning policy, no deprecation policy, no Sunset/Deprecation header documentation, no published
+  SLA and no changelog were found on any Simbe host. The status page is the strongest public
+  operational signal Simbe ships, and it independently confirms that Simbe runs an API in production.
+status_page:
+  present: true
+  url: https://status.simberobotics.com/
+  provider: incident.io
+  http_status: 200
+  components:
+  - name: Website
+    uptime_90d: '99.91%'
+  - name: API
+    uptime_90d: '99.91%'
+    note: >-
+      Simbe's own status page monitors an "API" component with a 90-day uptime history
+      (May 2026 - Aug 2026). This is the primary public evidence that a Simbe API exists.
+  - name: App
+  feeds:
+  - format: rss
+    url: https://status.simberobotics.com/feed.rss
+    status: 200
+  - format: atom
+    url: https://status.simberobotics.com/feed.atom
+  subscribe: true
+  incident_history: true
+  most_recent_incident_seen: '[Scheduled] Database Maintenance'
+versioning:
+  policy_published: false
+  scheme: unknown
+  note: No public versioning policy found.
+deprecation:
+  policy_published: false
+  sunset_header_documented: false
+  deprecation_header_documented: false
+  note: >-
+    No deprecation or sunset policy is published. No Deprecation pointer is emitted in apis.yml
+    because there is no policy to point at.
+sla:
+  published: false
+  note: >-
+    No public SLA. The status page publishes observed uptime percentages, which is not a
+    contractual commitment.
+support:
+  channel: https://simberobotics.atlassian.net/servicedesk/customer/portal/3
+  type: Atlassian Jira Service Management customer portal
+  http_status: 200
+deprecated_operations: []

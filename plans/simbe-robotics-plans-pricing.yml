@@ -1,0 +1,21 @@
+generated: '2026-08-27'
+method: searched
+source: https://www.simberobotics.com/
+plan_count: 0
+note: >-
+  Simbe publishes no pricing page and no plans of any kind. The 1,334-URL sitemap at
+  www.simberobotics.com/sitemap.xml contains no /pricing, /plans or /packages path, and the site's
+  only commercial call to action is a "Talk to us" / contact form. Simbe sells an enterprise
+  robotics-as-a-service deployment to retail chains, priced per store through a sales engagement;
+  the API is bundled into that engagement rather than sold or metered on its own. An honest zero,
+  not a gap in this probe.
+model: enterprise-contact-sales
+currency: null
+plans: []
+evidence:
+- url: https://www.simberobotics.com/sitemap.xml
+  status: 200
+  note: 1,334 URLs, no pricing or plans path.
+- url: https://www.simberobotics.com/about/contact-us
+  status: 200
+  note: Contact-sales form is the only commercial entry point.
