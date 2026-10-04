@@ -48,7 +48,7 @@ tags:
 - Robotics
 - Retail
 - Inventory
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
 - Store Intelligence
 - RFID
@@ -65,6 +65,7 @@ tags_raw:
 - RFID
 - Supply Chain
 - Physical AI
+- Computer-Vision
 apis:
 - name: Simbe Store Intelligence API
   description: Simbe's cloud platform API, which feeds Tally-captured shelf, inventory, pricing and out-of-stock
